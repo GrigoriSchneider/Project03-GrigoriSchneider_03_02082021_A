@@ -1,0 +1,25 @@
+{
+  "name": "ohmyfood_project_02",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "Grigori Schneider",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "sass": "^1.32.5"
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}

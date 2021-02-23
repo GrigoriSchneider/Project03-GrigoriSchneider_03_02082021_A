@@ -1,0 +1,52 @@
+
+         .btn-grad, .btn-order {background-image: linear-gradient(to right, $color-primary 0%, #33001b  51%, lighten($color-primary, 10%)  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 1rem 2rem;
+            text-align: center;
+            
+            transition: 0.7s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border: none;
+            border-radius: 2rem;
+            display: block;
+            cursor: pointer;
+            transition-property: transform, box-shadow;
+            
+          }
+
+          .btn-grad:hover, .btn-order:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+            transform: scale(.95);
+            box-shadow: 0 3px 15px -2px;
+            
+          }
+         
+          .btn-order{
+            margin: 10px;
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+            width: 185px;
+            
+            transition: 1s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border: none;
+            border-radius: 2rem;
+            display: block;
+            cursor: pointer;
+            transition-property: transform, box-shadow;
+            
+          }
+
+         
+.btn-heart:hover{
+    animation: btn-heart 0.7s forwards 0s ease-in-out;
+    cursor: pointer;
+}

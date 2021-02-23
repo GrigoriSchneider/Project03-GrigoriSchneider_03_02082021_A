@@ -1,0 +1,316 @@
+body{
+    
+    @media only screen and (min-width: $screen){
+        
+        background: linear-gradient( $color-secondary, $color-primary);
+    }
+}
+
+.loader{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 16%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+
+    @media only screen and (min-width: $ipad){
+        top: 35%;
+    }
+    @media only screen and (min-width: $ipad){
+        top: 46%;
+        width: 8rem;
+        height: 8rem;
+    }
+
+    &-inner{
+        width: 100%;
+        height: 100%;
+        border: 1rem solid $color-primary;
+        border-radius: 50%;
+        border-bottom-color: white;
+        border-top-color: white;
+        animation: loader 1.5s linear forwards;
+        opacity: 0;
+    }
+}
+
+.container{
+    
+    @media only screen and (min-width: $screen){
+       
+      
+        display: grid;
+        grid-template-columns: 1fr 1024px 1fr;
+    }
+    &-index{
+        opacity: 0;
+        animation: body 1s linear 1s forwards;
+    }
+}
+// Header
+.header{
+    background-color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+
+    @media only screen and (min-width: $screen){
+        grid-column: 2/3;
+    }
+}
+
+// Section welcome
+.welcome{
+    
+    background-color: $color-btn-howitworks;
+    
+    
+    @media only screen and (min-width: $screen){
+        grid-column: 2/3;
+    }
+
+
+    &__location{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eaeaea;
+        height: 50px;
+        i{
+            margin-right: 1.5rem;
+        }
+        p{
+            font-size: large;
+            font-weight: 500;
+        }
+    }
+    &__intro{
+       
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 280px;
+
+        h1{
+            font-weight: 600;
+        }
+        p{
+            
+            text-align: center;
+            font-size: 19px;
+        }
+        .btn{
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            background-color: $color-primary;
+            color: white;
+            position: relative;
+            z-index: 1;
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                border-radius: 2rem;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: darken($color-primary, 5);
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 250ms;
+            }
+        }
+    }
+}
+
+// Section How it works
+.howitworks{
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+
+    height: 440px;
+
+    @media only screen and (min-width: $ipad){
+        height: 480px;
+    }
+
+    
+    @media only screen and (min-width: $screen){
+        grid-column: 2/3;
+    }
+    
+    &__btn-container{
+        
+        background-color: $color-btn-howitworks;
+        height: 75px;
+        width: 330px;
+        border-radius: 1.5rem;
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        @media only screen and (min-width: $ipad){
+            height: 90px;
+            width: 400px;
+        }
+
+        span{
+            color: white;
+            background:$color-primary;
+            border-radius: 50%;
+            padding: .7rem 1rem;
+            position: absolute;
+            left: -1rem;
+            top: 1rem;
+
+            @media only screen and (min-width: $ipad){
+                padding: .7rem 1.1rem;
+                top: 1.4rem;
+            }
+        }
+        i{
+            margin-right: 1.2rem;
+            margin-left: 2.5rem;
+            font-size: 1.5rem;
+            
+            @media only screen and (min-width: $ipad){
+                margin-right: 1.5rem;
+                margin-left: 3rem;
+                font-size: 1.8rem;
+            }
+        }
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+// Section restaurant
+
+.restaurants{
+    height: 1250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-btn-howitworks;
+
+    @media only screen and (min-width: $ipad){
+        height: 730px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+    @media only screen and (min-width: $screen){
+        grid-column: 2/3;
+    }
+
+    h1{
+        grid-column: 1/3;
+        margin-left: 2rem;
+    }
+
+    &__card{
+        height: 250px;
+        width: 340px;
+        border-radius: $border-radius;
+        box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.75);
+
+        @media only screen and (min-width: $ipad){
+            justify-self: center;
+        }
+        @media only screen and (min-width: $ipadpro){
+            width: 420px;
+        }
+        &-img{
+            position: relative;
+
+            img{
+                object-fit: cover;
+                height: 175px;
+                width: 340px;
+                border-top-left-radius: $border-radius;
+                border-top-right-radius: $border-radius;
+                @media only screen and (min-width: $ipadpro){
+                    width: 420px;
+                }
+            }
+            span{
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                padding: 0.2rem 1rem;
+                background: $color-tertiary;
+                color: darken($color-tertiary, 40%);
+                font-weight: 500;
+                border-radius: 3px;
+            }
+        }       
+    }
+    &__card-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: .5rem 1.5rem;
+
+        i{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+// footer
+
+.footer{
+   
+    background-color: $color-footer;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 2rem;
+
+    
+    @media only screen and (min-width: $screen){
+        grid-column: 2/3;
+    }
+    
+    &-logo{
+        img{
+            margin-top: .7rem;
+            width: 8rem;
+        
+        }       
+    }
+    &__nav{
+        height: 130px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+
+        a{
+            color: white
+           
+        }
+    }
+}
