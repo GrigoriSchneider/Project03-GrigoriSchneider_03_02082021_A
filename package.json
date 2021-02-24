@@ -1,25 +1,22 @@
 {
-  "name": "ohmyfood_project_03",
+  "name": "grigorischneider_03_02082021_a",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
   },
-  "keywords": [],
-  "author": "Grigori Schneider",
-  "license": "ISC",
-  "dependencies": {
-    "node-sass": "^4.12.0",
-    "sass": "^1.32.5"
-  },
-  "description": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/GrigoriSchneider/Project03-GrigoriSchneider_03_02082021_A.git"
   },
-  "homepage": "https://grigorischneider.github.io/Project03-GrigoriSchneider_03_02082021_A",
+  "author": "Grigori Schneider",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrigoriSchneider/Project03-GrigoriSchneider_03_02082021_A/issues"
+  },
+  "homepage": "https://grigorischneider.github.io/ohmyfood",
   "devDependencies": {
-    "gh-pages": "^1.2.0"
+    "gh-pages": "^3.1.0"
   }
 }
