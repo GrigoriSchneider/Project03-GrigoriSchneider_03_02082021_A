@@ -64,10 +64,6 @@ a {
   animation: btn-heart 0.7s forwards 0s ease-in-out;
   cursor: pointer; }
 
-@media only screen and (min-width: 1366px) {
-  body {
-    background: linear-gradient(#FF79DA, #9356DC); } }
-
 .loader {
   width: 5rem;
   height: 5rem;
@@ -313,10 +309,13 @@ a {
   .menu__img {
     position: relative; }
     .menu__img img {
-      width: 375px; }
+      width: 375px;
+      height: 350px;
+      object-fit: cover; }
       @media only screen and (min-width: 768px) {
         .menu__img img {
-          width: 768px; } }
+          width: 768px;
+          height: 450px; } }
       @media only screen and (min-width: 1024px) {
         .menu__img img {
           width: 1024px; } }
@@ -416,18 +415,23 @@ a {
     width: 350px;
     align-self: center;
     align-items: center;
+    font-size: small;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.75);
     border-radius: 1rem; }
     @media only screen and (min-width: 768px) {
       .menu__card .card {
+        font-size: large;
         grid-template-rows: 45px 45px; } }
     @media only screen and (min-width: 1024px) {
       .menu__card .card {
+        font-size: larger;
         grid-template-rows: 55px 55px; } }
     .menu__card .card:hover .icon-container {
       animation: container 1s forwards 0s ease-in-out; }
     .menu__card .card:hover .icon-container__circle {
       animation: spin 1s forwards 0s ease-in-out; }
+    .menu__card .card:hover span {
+      animation: span .8s forwards 0s ease-in-out; }
     @media only screen and (min-width: 768px) {
       .menu__card .card {
         width: 600px;
@@ -447,18 +451,23 @@ a {
     .menu__card .card__content {
       grid-column: 1/3;
       grid-row: 2/3;
+      width: 350px;
       display: grid;
       grid-template-columns: 1fr  35px; }
       @media only screen and (min-width: 768px) {
         .menu__card .card__content {
-          grid-template-columns: 1fr  60px; } }
+          grid-template-columns: 1fr  60px;
+          width: 600px; } }
+      @media only screen and (min-width: 1024px) {
+        .menu__card .card__content {
+          width: 800px; } }
       .menu__card .card__content p {
         margin-left: 1rem; }
         @media only screen and (min-width: 768px) {
           .menu__card .card__content p {
             margin-left: 2rem; } }
       .menu__card .card__content span {
-        grid-column: 2/3; }
+        display: block; }
     .menu__card .card .icon-container {
       display: grid;
       align-items: center;
@@ -522,6 +531,14 @@ a {
     opacity: 0; }
   100% {
     transform: rotate(0) translateX(0);
+    opacity: 1; } }
+
+@keyframes span {
+  0% {
+    transform: rotate(0) translateX(0px);
+    opacity: 0; }
+  100% {
+    transform: rotate(0) translateX(-65px);
     opacity: 1; } }
 
 @keyframes btn-heart {
