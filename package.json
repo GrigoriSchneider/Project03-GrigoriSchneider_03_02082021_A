@@ -1,9 +1,9 @@
 {
-  "name": "grigorischneider_03_02082021_a",
+  "name": "ohmyfood",
   "version": "1.0.1",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://grigorischneider.github.io/ohmyfood",
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^1.2.0"
   }
 }

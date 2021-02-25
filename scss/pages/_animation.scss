@@ -52,6 +52,18 @@
         }
 }
 
+@keyframes span{
+    0%{
+        transform: rotate(0) translateX(0px);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateX(-65px);
+        opacity: 1;
+        }
+}
+
+
 // btn-heart:hover
 
 
